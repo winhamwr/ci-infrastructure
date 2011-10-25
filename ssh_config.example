@@ -1,0 +1,4 @@
+Host my.ec2.public.dns
+    HostName my.ec2.public.dns
+    IdentityFile ~/.ssh/my_ec2_private_key
+    User ubuntu

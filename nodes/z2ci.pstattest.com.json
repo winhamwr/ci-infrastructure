@@ -1,0 +1,6 @@
+{
+    "ipaddress": "10.212.146.144",
+    "run_list": [
+        "role[jenkins]"
+    ]
+}

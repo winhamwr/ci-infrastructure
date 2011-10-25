@@ -1,0 +1,19 @@
+{
+	"name": "jenkins",
+	"chef_type": "role",
+	"json_class": "Chef::Role",
+	"default_attributes": {
+		"jenkins": {
+			"http_proxy": {
+				"variant": "nginx"
+			}
+		},
+		"java": {
+			"install_flavor": "sun"
+		}
+	},
+	"run_list": [
+		"recipe[jenkins]"
+	],
+	"override_attributes": {}
+}

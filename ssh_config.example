@@ -1,5 +1,5 @@
 Host ec2_public_dns
     HostName ec2_public_dns
-    IdentityFile ~/.ssh/ec2_private_key
+    IdentityFile /home/me/.ssh/ec2_private_key
     User ubuntu
 	StrictHostKeyChecking no

@@ -1,4 +1,5 @@
-Host my.ec2.public.dns
-    HostName my.ec2.public.dns
-    IdentityFile ~/.ssh/my_ec2_private_key
+Host ec2_public_dns
+    HostName ec2_public_dns
+    IdentityFile ~/.ssh/ec2_private_key
     User ubuntu
+	StrictHostKeyChecking no

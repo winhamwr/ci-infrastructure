@@ -1,0 +1,16 @@
+{
+    "jenkins": {
+        "server": {
+            "home": "/opt/jenkins_home",
+            "ebs_device": "/dev/sdj",
+            "fstype": "xfs"
+        },
+        "http_proxy": {
+            "host_name": "ec2_public_dns"
+        }
+    },
+    "run_list": [
+        "role[jenkins]"
+    ]
+}
+

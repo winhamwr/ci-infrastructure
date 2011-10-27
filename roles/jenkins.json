@@ -13,6 +13,7 @@
 		}
 	},
 	"run_list": [
+		"recipe[ci]",
 		"recipe[jenkins]"
 	],
 	"override_attributes": {}

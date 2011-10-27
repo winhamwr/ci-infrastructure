@@ -1,0 +1,30 @@
+{
+  "name": "ci",
+  "description": "Installs and configures Jenkins CI server & slaves",
+  "long_description": "Pre-configuration for Jenkins installation",
+  "maintainer": "Wes Winham",
+  "maintainer_email": "winhamwr@gmail.com",
+  "license": "Apache 2.0",
+  "platforms": {
+  },
+  "dependencies": {
+    "xfs": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0"
+}

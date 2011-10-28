@@ -125,12 +125,12 @@ I'd recommend going to `Manage Jenkins` - `Configure` and checking the `Enable
 security` box so that you can set up user accounts. Keeping your build server
 open to the internet is kind of a security risk.
 
-## Future
+## Contributing
 
-* Document managing plugins with databags
-* Provide a sane default Jenkins configuration
-* Provide common job templates for things like running pylint, nose tests,
-  spawning build slaves, running jslint etc.
+We've got plenty of things to improve, so pull requests are very welcome. 
+
+Future plans exists as github issues, so feel free to file issues if you'd
+like to see something.
 
 
 

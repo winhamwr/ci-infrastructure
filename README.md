@@ -92,7 +92,8 @@ few values and then keep rolling.
 
     $ cat ssh_config.example >> ~/.ssh/config
 
-Then open your `~/.ssh/config` in your favorite text and change the following values:
+Then open your `~/.ssh/config` in your favorite text editor and change the
+following values:
 
 * `ec2_public_dns` should be whatever URL you're using to reach your instance
 * `ec2_private_key` is the path to the AWS key pair file you used to create the instance

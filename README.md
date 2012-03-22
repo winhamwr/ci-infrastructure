@@ -118,6 +118,14 @@ Jenkins and then put an Nginx reverse-proxy in front of Jenkins.
     $ fix node:ec2_public_dns deploy_chef
     $ fix node:ec2_public_dns
 
+**Protip:** If you get `Fatal error: Cookbook "jenkins" has no metadata.json`
+then you probably forgot to use the `--recursive` flag when cloning the repo,
+silly instruction skipper. You don't have the git submodules! Dispare not,
+as you can rectify this unfortunate situation with:
+
+	$ git submodule init
+	$ git submodule update
+
 ### 8. Configure Jenkins
 
 You're all set! Now go to the URL you've been using through your browser and

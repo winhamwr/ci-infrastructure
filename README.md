@@ -1,5 +1,7 @@
 # Continuous Integration Boostrapper
 
+**version** 0.1.0
+
 Getting a fresh Jenkins server set up is kind of a pain and because of that,
 fewer projects have one than should. This project is designed to make it easy
 for people to fork and get set up with their very-own Jenkins server in the

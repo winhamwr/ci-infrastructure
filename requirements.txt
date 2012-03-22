@@ -1,2 +1,1 @@
--e git+git://github.com/tobami/littlechef.git@ad541cf295818#egg=littlechef
-#littlechef==1.0.2
+-e git+git://github.com/tobami/littlechef.git@1.1.0#egg=littlechef

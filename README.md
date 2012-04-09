@@ -1,11 +1,11 @@
-# Continuous Integration Boostrapper
+# Continuous Integration Bootstrapper
 
 **version** 0.1.0
 
 Getting a fresh Jenkins server set up is kind of a pain and because of that,
 fewer projects have one than should. This project is designed to make it easy
 for people to fork and get set up with their very-own Jenkins server in the
-cloud because CI is awesome. 
+cloud because CI is awesome.
 
 Right now it only supports Jenkins on Ubuntu 10.04 on Amazon EC2, but pull
 requests are welcome.
@@ -14,7 +14,7 @@ requests are welcome.
 
 ci-infrastructure uses  [Chef](http://wiki.opscode.com/display/chef/Home)
 driven via [littlechef](https://github.com/tobami/littlechef) to make the setup
-as painless as possible. You fork this project, configure your ec2 credentials,
+as painless as possible. You fork this project, configure your EC2 credentials,
 configure your SSH access and then you're a couple of commands away from a
 maintanable CI setup that you can use to make your software more awesome.
 
@@ -68,10 +68,10 @@ Alternatively, you can just run these commands.
 Note: I'd prefer to make this possible with a one-command solution via this
 project, but for now, these are manual steps. Pull requests very welcome.
 
-1. Sign in to the [aws console](http://console.aws.amazon.com)
+1. Sign in to the [AWS console](http://console.aws.amazon.com)
 2. Use the 32-bit instance root store Ubuntu 10.04 AMI in your preferred region
   from [this list](http://uec-images.ubuntu.com/releases/10.04/release/) to
-  launch your ec2 instance. Click the ami links to redirect to the console launch
+  launch your EC2 instance. Click the AMI links to redirect to the console launch
   screen for a handy shortcut. I recommend the High-CPU Medium instance.
 3. Use the console to create a new 20GB EBS volume in the same availability zone as your freshly-launched instance.
 4. Attach the new EBS volume to your instance as device `/dev/sdj` (or whatever you'd like).
@@ -80,16 +80,16 @@ project, but for now, these are manual steps. Pull requests very welcome.
 
 ### 5. Configure SSH Authentication
 
-Littlechef needs to know how to authenticate to your ec2 instance and gives you
+Littlechef needs to know how to authenticate to your EC2 instance and gives you
 the ability to set a username, password and private key. My preference though,
 is to just use your existing `~/.ssh/config` file since that puts connecting to
 your instances on the same level as all of the other SSH work you do. It also
-means that if you konw how to use an ssh config, you can do other cool stuff.
+means that if you know how to use an SSH config, you can do other cool stuff.
 Because of this, the auth.cfg that comes with this project just points to your
-existing ssh configuration file.
+existing SSH configuration file.
 
 There's an example bit of configuration located at `ssh_config.example` to get
-you started. You can concatonate the example to your `~/.ssh/config`, edit a
+you started. You can concatenate the example to your `~/.ssh/config`, edit a
 few values and then keep rolling.
 
     $ cat ssh_config.example >> ~/.ssh/config
@@ -102,7 +102,7 @@ following values:
 
 ### 6. Configure Littlechef for Your Instance
 
-Now it's time to create a `node` configuration for our ec2 instance so that
+Now it's time to create a `node` configuration for our EC2 instance so that
 Littlechef knows where to go and what to do. Replace `ec2_public_dns` with your
 actual value of course:
 
@@ -125,8 +125,8 @@ then you probably forgot to use the `--recursive` flag when cloning the repo,
 silly instruction skipper. You don't have the git submodules! Dispare not,
 as you can rectify this unfortunate situation with:
 
-	$ git submodule init
-	$ git submodule update
+    $ git submodule init
+    $ git submodule update
 
 ### 8. Configure Jenkins
 
@@ -140,8 +140,5 @@ open to the internet is kind of a security risk.
 
 We've got plenty of things to improve, so pull requests are very welcome. 
 
-Future plans exists as github issues, so feel free to file issues if you'd
+Future plans live at github issues, so feel free to file issues if you'd
 like to see something.
-
-
-

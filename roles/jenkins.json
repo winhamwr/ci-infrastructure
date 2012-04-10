@@ -7,9 +7,6 @@
 			"http_proxy": {
 				"variant": "nginx"
 			}
-		},
-		"java": {
-			"install_flavor": "sun"
 		}
 	},
 	"run_list": [

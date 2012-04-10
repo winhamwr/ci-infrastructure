@@ -30,6 +30,8 @@ manual work.
 
     $ git clone --recursive git://github.com/winhamwr/ci-infrastructure.git
 
+The --recursive is important, you will regret not having done this later.
+
 ### 2. Install Chef
 
 Because of some recent changes to the way Chef uses ruby vs json metadata
@@ -62,6 +64,11 @@ Alternatively, you can just run these commands.
     $ mkdir ~/.virtualenvs
     $ virtualenv ~/.virtualenvs/ci-infrastructure
     $ pip install -r path/to/ci-infrastructure/requirements.txt
+
+Note: if you close your shell, you must run the following command
+to switch to the ci-infrastructure virtual environment:
+
+    $ source ~/.virtualenvs/ci-infrastructure/bin/activate
 
 ### 4. Launch Your EC2 Node
 
@@ -97,8 +104,15 @@ few values and then keep rolling.
 Then open your `~/.ssh/config` in your favorite text editor and change the
 following values:
 
-* `ec2_public_dns` should be whatever URL you're using to reach your instance
-* `ec2_private_key` is the path to the AWS key pair file you used to create the instance
+* `ec2_public_dns` should be whatever URL you're using to reach your instance (for example, ec2-XX-XX-XX-XX.compute-1.amazonaws.com)
+* `ec2_private_key` is the path to the AWS key pair file you used to create the instance (usually .pem file)
+
+Ensure that your security group allows SSH access from 0.0.0.0.
+If your SSH wasn't open, you should also open port 80 so you can hit Jenkins from the internet.
+
+When you've done this step successfully, you should be able to run:
+
+    $ ssh ec2-XX-XX-XX-XX.compute-1.amazonaws.com
 
 ### 6. Configure Littlechef for Your Instance
 
@@ -122,7 +136,7 @@ Jenkins and then put an Nginx reverse-proxy in front of Jenkins.
 
 **Protip:** If you get `Fatal error: Cookbook "jenkins" has no metadata.json`
 then you probably forgot to use the `--recursive` flag when cloning the repo,
-silly instruction skipper. You don't have the git submodules! Dispare not,
+silly instruction skipper. You don't have the git submodules! Despair not,
 as you can rectify this unfortunate situation with:
 
     $ git submodule init
